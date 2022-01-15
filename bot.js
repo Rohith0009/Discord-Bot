@@ -7,6 +7,7 @@ const client = new Discord.Client({
 
 const bot_prefix = "$"
 const changecolor_command ="changecolor"
+bot = commands.Bot(case_insensitive=True)
 
 const blue = "Blue"
 
@@ -15,20 +16,26 @@ client.on("ready", () => {
 })
 
 client.on('message', msg => {
-  if (msg.content === "Good Morning"){
+  if (msg.content.lower() === "good morning"){
     msg.reply("Good Morning!")
   } 
 })
 
 client.on('message', msg => {
-  if (msg.content === "Good Afternoon"){
+  if (msg.content.lower() === "good afternoon"){
     msg.reply("Good Afternoon!")
   } 
 })
 
 client.on('message', msg => {
-  if (msg.content === "Good Night"){
+  if (msg.content.lower() === "good night"){
     msg.reply("Good Night!")
+  } 
+})
+
+client.on('message', msg => {
+  if (msg.content.lower() === "hello!"){
+    msg.reply("Hello!")
   } 
 })
 
