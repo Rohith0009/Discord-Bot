@@ -21,6 +21,18 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+  if (msg.content === "Good Afternoon"){
+    msg.reply("Good Afternoon!")
+  } 
+})
+
+client.on('message', msg => {
+  if (msg.content === "Good Night"){
+    msg.reply("Good Night!")
+  } 
+})
+
+client.on('message', msg => {
   if (msg.content === "${bot_prefix}${changecolor_command}"){
     msg.reply("In Preparation")
   }
