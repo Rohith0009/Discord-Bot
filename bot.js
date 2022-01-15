@@ -10,30 +10,32 @@ const changecolor_command ="changecolor"
 
 const blue = "Blue"
 
+var message = msg.content.toLowerCase();
+
 client.on("ready", () => {
   console.log("Our bot is ready to go!!!!")
 })
 
 client.on('message', msg => {
-  if (msg.content.lower() === "good morning"){
+  if (message === "good morning"){
     msg.reply("Good Morning!")
   } 
 })
 
 client.on('message', msg => {
-  if (msg.content.lower() === "good afternoon"){
+  if (message === "good afternoon"){
     msg.reply("Good Afternoon!")
   } 
 })
 
 client.on('message', msg => {
-  if (msg.content.lower() === "good night"){
+  if (message === "good night"){
     msg.reply("Good Night!")
   } 
 })
 
 client.on('message', msg => {
-  if (msg.content.lower() === "hello!"){
+  if (message === "hello!"){
     msg.reply("Hello!")
   } 
 })
