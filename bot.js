@@ -7,7 +7,6 @@ const client = new Discord.Client({
 
 const bot_prefix = "$"
 const changecolor_command ="changecolor"
-bot = commands.Bot(case_insensitive=True)
 
 const blue = "Blue"
 
