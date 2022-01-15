@@ -17,6 +17,7 @@ client.on("ready", () => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   if (message === "good morning"){
     msg.reply("Good Morning!")
   } 
@@ -24,6 +25,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   if (message === "good afternoon"){
     msg.reply("Good Afternoon!")
   } 
@@ -31,6 +33,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   if (message === "good night"){
     msg.reply("Good Night!")
   } 
@@ -38,6 +41,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   if (message === "hello!"){
     msg.reply("Hello!")
   } 
@@ -45,6 +49,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   if (message === "hello"){
     msg.reply("Hello!")
   } 
