@@ -17,7 +17,7 @@ client.on("ready", () => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/g, '');
   if (message === "good morning"){
     msg.reply("Good Morning!")
   } 
@@ -25,7 +25,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/, '');
+  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, '');
   if (message === "good afternoon"){
     msg.reply("Good Afternoon!")
   } 
@@ -33,7 +33,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/, '');
+  var message = message.replace(/[&\/\\#,+()$!~%.'":*?<>{}]/, '');
   if (message === "good night"){
     msg.reply("Good Night!")
   } 
@@ -41,7 +41,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/, '');
+  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, '');
   if (message === "hello!"){
     msg.reply("Hello!")
   } 
@@ -49,7 +49,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/, '');
+  var message = message.replace(/[&\/\\#,+()$~%!.'":*?<>{}]/, '');
   if (message === "hello"){
     msg.reply("Hello!")
   } 
@@ -61,20 +61,20 @@ client.on('message', msg => {
   }
 })
 
-client.on("message", msg => {
+client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]'/, '');
+  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]'/, '');
   if (message == "i love rohiths tech") {
     msg.react("💖")
-  }
+    }
   })
 
   client.on("message", msg => {
     var message = msg.content.toLowerCase();
-    var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/, '');
+    var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, '');
     if (message == "thank you rohith") {
       msg.react("💖")
-    }
+      }
     })
 
 client.login(process.env.BOT_TOKEN)
