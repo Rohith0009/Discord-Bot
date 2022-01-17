@@ -61,4 +61,20 @@ client.on('message', msg => {
   }
 })
 
+client.on("message", msg => {
+  var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+  if (msg.content == "i love rohiths tech") {
+    msg.react("💖")
+  }
+  })
+
+  client.on("message", msg => {
+    var message = msg.content.toLowerCase();
+    var message = message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+    if (msg.content == "thank you rohith") {
+      msg.react("💖")
+    }
+    })
+
 client.login(process.env.BOT_TOKEN)
