@@ -17,7 +17,7 @@ client.on("ready", () => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/g, '');
+  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, '');
   if (message === "good morning"){
     msg.reply("Good Morning!")
   } 
@@ -56,6 +56,14 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+  var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~%!.'":*?<>{}]/, '');
+  if (message === "how are you"){
+    msg.reply("I Am Fine! How Are You?")
+  } 
+})
+
+client.on('message', msg => {
   if (msg.content === "${bot_prefix}${changecolor_command}"){
     msg.reply("In Preparation")
   }
@@ -63,7 +71,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]'/, '');
+  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, '');
   if (message == "i love rohiths tech") {
     msg.react("💖")
     }
