@@ -41,56 +41,36 @@ client.on("message", (msg) => {
 
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
-  if (message === "$changecolor " + "Red") {
-    red(msg.member);
+  if (msg.content === "$changecolor " + "Red") {
+    msg.member.roles.add("917624901152677908");
     msg.reply("Successfully Changed Color To Red");
   }
-  if (message === "$changecolor " + "Orange") {
-    orange(msg.member);
+  if (msg.content === "$changecolor " + "Orange") {
+    msg.member.roles.add("917624903207886918");
     msg.reply("Successfully Changed Color To Orange");
   }
-  if (message === "$changecolor " + "Yellow") {
-    yellow(msg.member);
+  if (msg.content === "$changecolor " + "Yellow") {
+    msg.member.roles.add("917624903174332448");
     msg.reply("Successfully Changed Color To Yellow");
   }
-  if (message === "$changecolor " + "Green") {
-    green(msg.member);
+  if (msg.content === "$changecolor " + "Green") {
+    msg.member.roles.add("917624902486458439");
     msg.reply("Successfully Changed Color To Green");
   }
-  if (message === "$changecolor " + "Blue") {
-    blue(msg.member);
+  if (msg.content === "$changecolor " + "Blue") {
+    msg.member.roles.add("917624903828664351");
     msg.reply("Successfully Changed Color To Blue");
   }
-  if (message === "$changecolor " + "Purple") {
-    purple(msg.member);
+  if (msg.content === "$changecolor " + "Purple") {
+    msg.member.roles.add("917624901563732090");
     msg.reply("Successfully Changed Color To Purple");
   }
 });
-
-function red(member) {
-  member.roles.add("917624901152677908");
-}
-function orange(member) {
-  member.roles.add("917624903207886918");
-}
-function yellow(member) {
-  member.roles.add("917624903174332448");
-}
-function green(member) {
-  member.roles.add("917624902486458439");
-}
-function blue(member) {
-  member.roles.add("917624903828664351");
-}
-function purple(member) {
-  member.roles.add("917624901563732090");
-}
 
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   if (message === bot_prefix + "help") {
     msg.channel.send("Change Theme Color: $changecolor 'Color Name'");
-    msg.channel.send("Alert: Feature Currently Not Working Correctly");
   }
 });
 
