@@ -36,6 +36,9 @@ client.on("message", (msg) => {
   if (message === "hello") {
     msg.reply("Hello!");
   }
+  if (message === "hi") {
+    msg.reply("Hello!");
+  }
   if (message === "how are you") {
     msg.reply("I Am Fine! How Are You?");
   }
