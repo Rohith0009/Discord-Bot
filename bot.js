@@ -6,7 +6,6 @@ const client = new Discord.Client({
 });
 
 const bot_prefix = "$";
-const blue = "Blue";
 
 client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
@@ -18,27 +17,12 @@ client.on("message", (msg) => {
   if (message === "good morning") {
     msg.reply("Good Morning!");
   }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, "");
   if (message === "good afternoon") {
     msg.reply("Good Afternoon!");
   }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, "");
   if (message === "good evening") {
     msg.reply("Good Evening!");
   }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$!~%.'":*?<>{}]/, "");
   if (message === "good night") {
     msg.reply("Good Night!");
   }
@@ -47,38 +31,40 @@ client.on("message", (msg) => {
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
-  if (message === "hello!") {
-    msg.reply("Hello!");
-  }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%!.'":*?<>{}]/, "");
   if (message === "hello") {
     msg.reply("Hello!");
   }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~%!.'":*?<>{}]/, "");
   if (message === "how are you") {
     msg.reply("I Am Fine! How Are You?");
   }
 });
 
 client.on("message", (msg) => {
-    var message = msg.content.toLowerCase();
-  if (message === bot_prefix + "changecolor") {
-    msg.reply("In Preparation");
+  var message = msg.content.toLowerCase();
+  if (message === bot_prefix + "changecolor" + "Red") {
+    member.roles.add("917624901152677908");
+  }
+  if (message === bot_prefix + "changecolor" + "Orange") {
+    member.roles.add("917624903207886918");
+  }
+  if (message === bot_prefix + "changecolor" + "Yellow") {
+    member.roles.add("917624903174332448");
+  }
+  if (message === bot_prefix + "changecolor" + "Green") {
+    member.roles.add("917624902486458439");
+  }
+  if (message === bot_prefix + "changecolor" + "Blue") {
+    member.roles.add("917624903828664351");
+  }
+  if (message === bot_prefix + "changecolor" + "Purple") {
+    member.roles.add("917624901563732090");
   }
 });
 
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
-  if (message === bot_prefix+"help") {
-    msg.reply("In Development");
+  if (message === bot_prefix + "help") {
+    msg.reply("Feature In Development");
   }
 });
 
@@ -88,11 +74,6 @@ client.on("message", (msg) => {
   if (message == "i love rohiths tech") {
     msg.react("💖");
   }
-});
-
-client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
   if (message == "thank you rohith") {
     msg.react("💖");
   }
