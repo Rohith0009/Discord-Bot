@@ -41,7 +41,7 @@ client.on("message", (msg) => {
 
 client.on("message", (msg) => {
     var message = msg.content.toLowerCase();
-  if (message === bot_prefix + "changecolor " + "Red") {
+  if (message === "$changecolor " + "Red") {
     member.roles.add("917624901152677908");
     msg.reply("Successfully Changed Color To Red");
   }
