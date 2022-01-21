@@ -41,27 +41,28 @@ client.on("message", (msg) => {
 
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
-  if (msg.content === "$changecolor " + "Red") {
+  var message = message.replace(/[&\/\\#,+()!~%.'":*?<>{}]/, "");
+  if (message === "$changecolor " + "red") {
     msg.member.roles.add("917624901152677908");
     msg.reply("Successfully Changed Color To Red");
   }
-  if (msg.content === "$changecolor " + "Orange") {
+  if (message === "$changecolor " + "orange") {
     msg.member.roles.add("917624903207886918");
     msg.reply("Successfully Changed Color To Orange");
   }
-  if (msg.content === "$changecolor " + "Yellow") {
+  if (message === "$changecolor " + "yellow") {
     msg.member.roles.add("917624903174332448");
     msg.reply("Successfully Changed Color To Yellow");
   }
-  if (msg.content === "$changecolor " + "Green") {
+  if (message === "$changecolor " + "green") {
     msg.member.roles.add("917624902486458439");
     msg.reply("Successfully Changed Color To Green");
   }
-  if (msg.content === "$changecolor " + "Blue") {
+  if (message === "$changecolor " + "blue") {
     msg.member.roles.add("917624903828664351");
     msg.reply("Successfully Changed Color To Blue");
   }
-  if (msg.content === "$changecolor " + "Purple") {
+  if (message === "$changecolor " + "purple") {
     msg.member.roles.add("917624901563732090");
     msg.reply("Successfully Changed Color To Purple");
   }
