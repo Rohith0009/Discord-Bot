@@ -12,10 +12,13 @@ client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
 });
 
+function remove_extra() {
+  var message = msg.content.toLowerCase();
+  var message = message.replace(/[&$\/\\#,+()~!%.'":*?<>{}]/, "");
+}
 /* Greeting Messages*/
 client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, "");
+  remove_extra();
   if (message === "good morning") {
     msg.reply("Good Morning!");
   }
@@ -31,8 +34,7 @@ client.on("message", (msg) => {
 });
 
 client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
+  remove_extra();
   if (message === "hello") {
     msg.reply("Hello!");
   }
@@ -76,16 +78,15 @@ client.on("message", (msg) => {
 
 /*Help Command*/
 client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  if (message === bot_prefix + "help") {
+  remove_extra();
+  if (message === "$help") {
     msg.channel.send("Change Theme Color: $changecolor 'Color Name'");
   }
 });
 
 /*Reaction Code*/
 client.on("message", (msg) => {
-  var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
+  remove_extra();
   if (message == "i love rohiths tech") {
     msg.react("💖");
   }
