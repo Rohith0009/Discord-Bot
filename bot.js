@@ -6,8 +6,6 @@ const client = new Discord.Client({
 });
 
 const bot_prefix = "$";
-const changecolor_command = "changecolor";
-
 const blue = "Blue";
 
 client.on("ready", () => {
@@ -71,8 +69,16 @@ client.on("message", (msg) => {
 });
 
 client.on("message", (msg) => {
-  if (msg.content === "${bot_prefix}${changecolor_command}") {
+    var message = msg.content.toLowerCase();
+  if (message === bot_prefix + "changecolor") {
     msg.reply("In Preparation");
+  }
+});
+
+client.on("message", (msg) => {
+  var message = msg.content.toLowerCase();
+  if (message === bot_prefix+"help") {
+    msg.reply("In Development");
   }
 });
 
