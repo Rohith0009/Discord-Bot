@@ -31,6 +31,15 @@ client.on('message', msg => {
   } 
 })
 
+client.on("message", (msg) => {
+  var message = msg.content.toLowerCase();
+  var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, "");
+  if (message === "good evening") {
+    msg.reply("Good Evening!");
+  }
+});
+
+
 client.on('message', msg => {
   var message = msg.content.toLowerCase();
   var message = message.replace(/[&\/\\#,+()$!~%.'":*?<>{}]/, '');
