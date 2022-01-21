@@ -40,6 +40,7 @@ client.on("message", (msg) => {
 });
 
 client.on("message", (msg) => {
+    var message = msg.content.toLowerCase();
   if (message === bot_prefix + "changecolor " + "Red") {
     member.roles.add("917624901152677908");
     msg.reply("Successfully Changed Color To Red");
@@ -69,7 +70,8 @@ client.on("message", (msg) => {
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   if (message === bot_prefix + "help") {
-    msg.channel.send("Feature In Development");
+    msg.channel.send("Change Theme Color: $changecolor 'Color Name'");
+        msg.channel.send("Alert: Feature Currently Not Working Correctly");
   }
 });
 
