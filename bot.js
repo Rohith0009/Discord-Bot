@@ -1,3 +1,4 @@
+/* Main Code*/
 require("dotenv").config();
 
 const Discord = require("discord.js");
@@ -11,6 +12,7 @@ client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
 });
 
+/* Greeting Messages*/
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   var message = message.replace(/[&\/\\#,+()$~!%.'":*?<>{}]/, "");
@@ -39,6 +41,7 @@ client.on("message", (msg) => {
   }
 });
 
+/*Theme Color Changing Commands*/
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   var message = message.replace(/[&\/\\#,+()!~%.'":*?<>{}]/, "");
@@ -68,6 +71,7 @@ client.on("message", (msg) => {
   }
 });
 
+/*Help Command*/
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   if (message === bot_prefix + "help") {
@@ -75,6 +79,7 @@ client.on("message", (msg) => {
   }
 });
 
+/*Reaction Code*/
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
@@ -87,3 +92,4 @@ client.on("message", (msg) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+/*End Of Code*/
