@@ -6,8 +6,6 @@ const client = new Discord.Client({
   partials: ["MESSAGE"],
 });
 
-const bot_prefix = "$";
-
 client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
 });
