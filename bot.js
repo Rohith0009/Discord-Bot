@@ -82,7 +82,9 @@ client.on("message", (msg) => {
     **Commands:**
     A)Change Theme Color: $changecolor 'Color Name'
     **Upcoming Features**
-    A) Will Add Slash Commands To The Bot To Make It Easy To Use`)
+    A) Will Add Slash Commands To The Bot To Make It Easy To Use
+    *©️Rohith M
+    Made Completely By Rohith M Using Discord.js And VS Code Editor*`)
   }
 });
 
