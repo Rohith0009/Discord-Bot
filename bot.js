@@ -76,15 +76,16 @@ client.on("message", (msg) => {
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
   if (message === "$help") {
-    msg.channel.send(`**Help:**
+    msg.channel.send(`**Help Menu:**
     **Notices:**
     A) Default Prefix Is $
     **Commands:**
     A)Change Theme Color: $changecolor 'Color Name'
     **Upcoming Features**
     A) Will Add Slash Commands To The Bot To Make It Easy To Use
+    ㅤ
     *©️Rohith M
-    Made Completely By Rohith M Using Discord.js And VS Code Editor*`)
+    Made Completely By Rohith M Using Discord.js And VS Code Editor*`);
   }
 });
 
