@@ -40,6 +40,12 @@ client.on("message", (msg) => {
   if (message === "how are you") {
     msg.reply("I Am Fine! How Are You?");
   }
+  if (message === "i am fine") {
+    msg.reply("Great!");
+  }
+    if (message === "i am bored") {
+      msg.reply("No Problem! I am There To Chat With You!!");
+    }
 });
 
 /*Theme Color Changing Commands*/
@@ -84,8 +90,8 @@ client.on("message", (msg) => {
     **Upcoming Features**
     A) Will Add Slash Commands To The Bot To Make It Easy To Use
     ㅤ
-    *©️Rohith M
-    Made Completely By Rohith M Using Discord.js And VS Code Editor*`);
+*©️Rohith M
+Made Completely By Rohith M Using Discord.js And VS Code Editor*`);
   }
 });
 
