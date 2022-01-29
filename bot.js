@@ -46,9 +46,9 @@ client.on("message", (msg) => {
   if (message === "i am bored") {
     msg.reply("No Problem! I am There To Chat With You!!");
   }
-  if (message === "hlo") {
-    var role = member.guild.roles.cache.find((role) => role.name === "Red");
-    member.roles.add(role);
+  if (message === "..") {
+    let role = message.guild.roles.cache.find((role) => role.name === "Red");
+    let member = message.mentions.members.first();
   }
 });
 
