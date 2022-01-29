@@ -10,6 +10,35 @@ client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
 });
 
+module.exports = {
+  commands: "..",
+  callback: (message, arguments) => {
+    const targetUser = message.mentions.users.first();
+    if (!targetUser) {
+      message.reply("Please specify someone to give a role to.");
+      return;
+    }
+
+    arguments.shift();
+
+    const roleName = arguments.join(" ");
+    const { guild } = message;
+
+    const role = guild.roles.cache.find((role) => {
+      return role.name === roleName;
+    });
+    if (!role) {
+      message.reply(`There is no role with the name "${roleName}"`);
+      return;
+    }
+
+    const member = guild.members.cache.get(targetUser.id);
+    member.roles.add(role);
+
+    message.reply(`that user now has the "${roleName}" role`);
+  },
+};
+
 /* Greeting Messages*/
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
@@ -45,9 +74,6 @@ client.on("message", (msg) => {
   }
   if (message === "i am bored") {
     msg.reply("No Problem! I am There To Chat With You!!");
-  }
-    let role = message.guild.roles.cache.find((role) => role.name === "Red");
-    let member = message.mentions.members.first();
   }
 });
 
