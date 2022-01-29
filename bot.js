@@ -43,9 +43,13 @@ client.on("message", (msg) => {
   if (message === "i am fine") {
     msg.reply("Great!");
   }
-    if (message === "i am bored") {
-      msg.reply("No Problem! I am There To Chat With You!!");
-    }
+  if (message === "i am bored") {
+    msg.reply("No Problem! I am There To Chat With You!!");
+  }
+  if (message === "hlo") {
+    var role = member.guild.roles.cache.find((role) => role.name === "Red");
+    member.roles.add(role);
+  }
 });
 
 /*Theme Color Changing Commands*/
