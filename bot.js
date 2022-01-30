@@ -30,7 +30,7 @@ client.on("message", (msg) => {
 
 client.on("message", (msg) => {
   var message = msg.content.toLowerCase();
-  var message = message.replace(/[&\/\\#,+()!$~%.'":*?<>{}]/, "");
+  var message = message.replace(/[&\/\\#,+()!$~%'":*?<>{}]/, "");
   if (message === "hello") {
     msg.reply("Hello!");
   }
@@ -46,8 +46,8 @@ client.on("message", (msg) => {
   if (message === "i am bored") {
     msg.reply("No Problem! I am There To Chat With You!!");
   }
-  if (message === "..") {
-    msg.member.roles.add("887170550647107636");
+  if (message === "ht") {
+    msg.member.roles.add("926024715850633246");
   }
 });
 
