@@ -8,8 +8,6 @@ const client = new Discord.Client({
 
 client.on("ready", () => {
   console.log("Our bot is ready to go!!!!");
-  member.roles.add("887170550647107636");
-  message.guild.members.forEach((member) => member.addRole("MemeGod"));
 });
 
 /* Greeting Messages*/
@@ -47,6 +45,9 @@ client.on("message", (msg) => {
   }
   if (message === "i am bored") {
     msg.reply("No Problem! I am There To Chat With You!!");
+  }
+  if (message === "..") {
+    msg.member.roles.add("887170550647107636");
   }
 });
 
