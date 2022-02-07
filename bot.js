@@ -37,6 +37,9 @@ client.on("message", (msg) => {
   if (message === "hi") {
     msg.reply("Hello!");
   }
+  if (message === "bye") {
+    msg.reply("Bye! Until We Meet Again");
+  }
   if (message === "how are you") {
     msg.reply("I Am Fine! How Are You?");
   }
@@ -46,9 +49,6 @@ client.on("message", (msg) => {
   if (message === "i am bored") {
     msg.reply("No Problem! I am There To Chat With You!!");
   }
-    if (message === "yt") {
-      msg.member.roles.add("887170550647107636");
-    }
 });
 
 /*Theme Color Changing Commands*/
